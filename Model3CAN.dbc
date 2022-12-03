@@ -2724,7 +2724,7 @@ BO_ 1310 ID51EFC_info: 8 VehicleBus
  SG_ FC_partNumChar20 m27 : 48|8@1+ (1,0) [0|1] ""  Receiver
 
 BO_ 886 ID376FrontInverterTemps: 8 VehicleBus
- SG_ TempFrontMultiplexor M : 0|2@1+ (1,0) [0|0] "" Receiver
+ SG_ TempFrontMultiplexor M : 0|3@1+ (1,0) [0|4] ""  Receiver
  SG_ TempInvPCB376 m0 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ TempPctStator376 m0 : 56|8@1+ (0.4,0) [0|102] "%"  Receiver
  SG_ TempPctInverter376 m0 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
@@ -2732,10 +2732,10 @@ BO_ 886 ID376FrontInverterTemps: 8 VehicleBus
  SG_ TempStator376 m0 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ TempInvHeatsink376 m0 : 40|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ TempInverter376 m0 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
- SG_ DIF_inverterTQF m0 : 2|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DIF_inverterTQF m0 : 3|2@1+ (1,0) [0|3] ""  Receiver
 
 BO_ 789 ID315RearInverterTemps: 8 VehicleBus
- SG_ RearTempMultiplexor M : 0|2@1+ (1,0) [0|0] ""  Receiver
+ SG_ RearTempMultiplexor M : 0|3@1+ (1,0) [0|4] ""  Receiver
  SG_ RearTempInvPCB315 m0 : 8|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ RearTempPctStator315 m0 : 56|8@1+ (0.4,0) [0|102] "%"  Receiver
  SG_ RearTempPctInverter315 m0 : 48|8@1+ (0.4,0) [0|102] "%"  Receiver
@@ -2743,7 +2743,7 @@ BO_ 789 ID315RearInverterTemps: 8 VehicleBus
  SG_ RearTempStator315 m0 : 24|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ RearTempInvHeatsink315 m0 : 40|8@1+ (1,-40) [-40|215] "C"  Receiver
  SG_ RearTempInverter315 m0 : 16|8@1+ (1,-40) [-40|215] "C"  Receiver
- SG_ DIR_inverterTQF m0 : 2|2@1+ (1,0) [0|3] ""  Receiver
+ SG_ DIR_inverterTQF m0 : 3|2@1+ (1,0) [0|3] ""  Receiver
 
 BO_ 340 ID154RearTorqueOld: 8 VehicleBus
  SG_ RAWTorqueRear154 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
@@ -3477,8 +3477,6 @@ VAL_ 562 BMS_fcContactorRequest 1 "SET_REQUEST_CLOSE" 4 "SET_REQUEST_CLOSE_NEGAT
 VAL_ 562 BMS_fcLinkOkToEnergizeRequest 1 "FC_LINK_ENERGY_AC" 2 "FC_LINK_ENERGY_DC" 0 "FC_LINK_ENERGY_NONE" ;
 VAL_ 562 BMS_internalHvilSenseV 65535 "SNA" ;
 VAL_ 562 BMS_packContactorRequest 1 "SET_REQUEST_CLOSE" 4 "SET_REQUEST_CLOSE_NEGATIVE_ONLY" 5 "SET_REQUEST_CLOSE_POSITIVE_ONLY" 2 "SET_REQUEST_OPEN" 3 "SET_REQUEST_OPEN_IMMEDIATELY" 0 "SET_REQUEST_SNA" ;
-VAL_ 609 VCFRONT_batterySMState 0 "INIT" 1 "CHARGE" 2 "DISCHARGE" 3 "STANDBY" 4 "RESISTANCE_ESTIMATION" 5 "OTA_STANDBY" 6 "DISCONNECTED_BATTERY_TEST" 7 "SHORTED_CELL_TEST" 8 "FAULT" 9 "RECOVERY" ;
-VAL_ 609 VCFRONT_voltageProfile 0 "CHARGE" 1 "FLOAT" 2 "REDUCED_FLOAT" 3 "ALWAYS_CLOSED_CONTACTORS" ;
 VAL_ 627 UI_displayBrightnessLevel 255 "SNA" ;
 VAL_ 627 UI_domeLightSwitch 2 "DOME_LIGHT_SWITCH_AUTO" 0 "DOME_LIGHT_SWITCH_OFF" 1 "DOME_LIGHT_SWITCH_ON" ;
 VAL_ 627 UI_driveStateRequest 0 "DRIVE_STATE_REQ_IDLE" 1 "DRIVE_STATE_REQ_START" ;
@@ -4178,6 +4176,8 @@ VAL_ 513 VCFRONT_solenoidEvapState 2 "CLOSED" 3 "FAULTED" 1 "OPENED" 0 "UNDEFINE
 VAL_ 513 VCFRONT_tempRefrigDischarge 2047 "SNA" ;
 VAL_ 513 VCFRONT_tempRefrigLiquid 2047 "SNA" ;
 VAL_ 513 VCFRONT_tempSuperheatActual 1023 "SNA" ;
+VAL_ 609 VCFRONT_batterySMState 0 "INIT" 1 "CHARGE" 2 "DISCHARGE" 3 "STANDBY" 4 "RESISTANCE_ESTIMATION" 5 "OTA_STANDBY" 6 "DISCONNECTED_BATTERY_TEST" 7 "SHORTED_CELL_TEST" 8 "FAULT" 9 "RECOVERY" ;
+VAL_ 609 VCFRONT_voltageProfile 0 "CHARGE" 1 "FLOAT" 2 "REDUCED_FLOAT" 3 "ALWAYS_CLOSED_CONTACTORS" ;
 VAL_ 548 DCDCstate224 6 "Error" 5 "Shutdown" 4 "HVactive" 3 "Precharge" 2 "PrechargeStart" 1 "12vChg" 0 "Idle" ;
 VAL_ 548 DCDCSubState224 0 "PWR_UP_INIT" 1 "STANDBY" 2 "12V_SUPPORT_ACTIVE" 3 "DIS_HVBUS" 4 "PCHG_FAST_DIS_HVBUS" 5 "PCHG_SLOW_DIS_HVBUS" 6 "PCHG_DWELL_CHARGE" 7 "PCHG_DWELL_WAIT" 8 "PCHG_DI_RECOVERY_WAIT" 9 "PCHG_ACTIVE" 10 "PCHG_FLT_FAST_DIS_HVBUS" 11 "SHUTDOWN" 12 "12V_SUPPORT_FAULTED" 13 "DIS_HVBUS_FAULTED" 14 "PCHG_FAULTED" 15 "CLEAR_FAULTS" 16 "FAULTED" 17 "NUM" ;
 VAL_ 551 CMP_state 3 "CMP_STATE_FAULT" 0 "CMP_STATE_NONE" 1 "CMP_STATE_NORMAL" 15 "CMP_STATE_SNA" 5 "CMP_STATE_SOFT_SHUTDOWN" 4 "CMP_STATE_SOFT_START" 2 "CMP_STATE_WAIT" ;
