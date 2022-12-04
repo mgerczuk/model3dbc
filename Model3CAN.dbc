@@ -2603,13 +2603,14 @@ BO_ 280 ID118DriveSystemStatus: 8 VehicleBus
  SG_ DI_tractionControlMode : 40|3@1+ (1,0) [0|6] ""  Receiver
 
 BO_ 850 ID352BMS_energyStatus: 8 VehicleBus
- SG_ BMS_energyBuffer : 55|8@1+ (0.1,0) [0|25.4] "KWh"  Receiver
- SG_ BMS_energyToChargeComplete : 44|11@1+ (0.1,0) [0|204.6] "KWh"  Receiver
- SG_ BMS_expectedEnergyRemaining : 22|11@1+ (0.1,0) [0|204.6] "KWh"  Receiver
- SG_ BMS_fullChargeComplete : 63|1@1+ (1,0) [0|1] ""  Receiver
- SG_ BMS_idealEnergyRemaining : 33|11@1+ (0.1,0) [0|204.6] "KWh"  Receiver
- SG_ BMS_nominalEnergyRemaining : 11|11@1+ (0.1,0) [0|204.6] "KWh"  Receiver
- SG_ BMS_nominalFullPackEnergy : 0|11@1+ (0.1,0) [0|204.6] "KWh"  Receiver
+ SG_ BMS_multiplexor M : 0|2@1+ (1,0) [0|3] "" Vector__XXX
+ SG_ BMS_energyBuffer m1 : 16|16@1+ (0.01,0) [0|655.35] "KWh"  Receiver
+ SG_ BMS_energyToChargeComplete m1 : 48|16@1+ (0.02,0) [0|1310.7] "KWh"  Receiver
+ SG_ BMS_expectedEnergyRemaining m1 : 32|16@1+ (0.02,0) [0|1310.7] "KWh"  Receiver
+ SG_ BMS_fullChargeComplete : 7|1@1+ (1,0) [0|1] ""  Receiver
+ SG_ BMS_idealEnergyRemaining m0 : 48|16@1+ (0.02,0) [0|1310.7] "KWh"  Receiver
+ SG_ BMS_nominalEnergyRemaining m0 : 32|16@1+ (0.02,0) [0|1310.7] "KWh"  Receiver
+ SG_ BMS_nominalFullPackEnergy m0 : 16|16@1+ (0.02,0) [0|1310.7] "KWh"  Receiver
 
 BO_ 893 ID37DCP_thermalStatus: 7 VehicleBus
  SG_ CP_acPinTemperature : 8|8@1+ (0.803922,-55) [-55|149.99] "C"  Receiver
@@ -3313,18 +3314,18 @@ BA_DEF_DEF_  "matchingcriteria" 0;
 BA_DEF_DEF_  "filterlabeling" 0;
 BA_DEF_DEF_  "SystemMessageLongSymbol" "";
 BA_ "BusType" "CAN";
-BA_ "GenMsgSendType" BO_ 530 0;
 BA_ "GenMsgCycleTime" BO_ 530 100;
+BA_ "GenMsgSendType" BO_ 530 0;
 BA_ "GenMsgCycleTime" BO_ 819 500;
 BA_ "GenMsgCycleTime" BO_ 577 100;
-BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 468 10;
+BA_ "GenMsgSendType" BO_ 468 0;
 BA_ "GenMsgCycleTime" BO_ 962 50;
 BA_ "GenMsgCycleTime" BO_ 822 1000;
 BA_ "GenMsgCycleTime" BO_ 659 500;
 BA_ "GenMsgCycleTime" BO_ 616 100;
-BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgSendType" BO_ 79 0;
+BA_ "GenMsgCycleTime" BO_ 79 1000;
 BA_ "GenMsgCycleTime" BO_ 978 1000;
 BA_ "GenMsgCycleTime" BO_ 722 100;
 BA_ "GenMsgCycleTime" BO_ 1345 100;
@@ -3336,12 +3337,12 @@ BA_ "GenMsgCycleTime" BO_ 801 1000;
 BA_ "SystemMessageLongSymbol" BO_ 513 "ID201VCFRONT_loggingAndVitals10Hz";
 BA_ "GenMsgCycleTime" BO_ 984 1000;
 BA_ "GenMsgCycleTime" BO_ 609 100;
-BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgSendType" BO_ 297 0;
+BA_ "GenMsgCycleTime" BO_ 297 10;
 BA_ "GenMsgCycleTime" BO_ 612 100;
 BA_ "GenMsgCycleTime" BO_ 548 100;
-BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgSendType" BO_ 280 0;
+BA_ "GenMsgCycleTime" BO_ 280 10;
 BA_ "GenMsgCycleTime" BO_ 850 1000;
 BA_ "GenMsgCycleTime" BO_ 594 100;
 BA_ "GenMsgCycleTime" BO_ 786 1000;
@@ -3349,17 +3350,17 @@ BA_ "GenMsgCycleTime" BO_ 658 100;
 BA_ "GenMsgCycleTime" BO_ 599 20;
 BA_ "GenMsgCycleTime" BO_ 1029 205;
 BA_ "GenMsgCycleTime" BO_ 886 1000;
-BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 340 10;
+BA_ "GenMsgSendType" BO_ 340 0;
 BA_ "GenMsgCycleTime" BO_ 950 1000;
 BA_ "GenMsgCycleTime" BO_ 614 10;
 BA_ "GenMsgCycleTime" BO_ 741 1000;
-BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgSendType" BO_ 264 0;
-BA_ "GenMsgSendType" BO_ 306 0;
+BA_ "GenMsgCycleTime" BO_ 264 10;
 BA_ "GenMsgCycleTime" BO_ 306 10;
-BA_ "GenMsgCycleTime" BO_ 294 100;
+BA_ "GenMsgSendType" BO_ 306 0;
 BA_ "GenMsgSendType" BO_ 294 0;
+BA_ "GenMsgCycleTime" BO_ 294 100;
 BA_ "GenMsgCycleTime" BO_ 799 1000;
 BA_ "GenMsgCycleTime" BO_ 1022 1000;
 BA_ "GenMsgCycleTime" BO_ 2047 100;
