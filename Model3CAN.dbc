@@ -1352,11 +1352,10 @@ BO_ 820 ID334UI_powertrainControl: 8 VehicleBus
  SG_ UI_closureConfirmed : 14|2@1+ (1,0) [0|2] ""  Receiver
 
 BO_ 826 ID33AUI_rangeSOC: 8 VehicleBus
- SG_ UI_idealRange : 16|10@1+ (1,0) [0|1023] "mi"  Receiver
  SG_ UI_Range : 0|10@1+ (1,0) [0|1023] "mi"  Receiver
- SG_ UI_SOC : 48|7@1+ (1,0) [0|127] "%"  Receiver
- SG_ UI_uSOE : 56|7@1+ (1,0) [0|127] "%"  Receiver
- SG_ UI_ratedWHpM : 32|10@1+ (1,0) [0|1023] "WHpM"  Receiver
+ SG_ UI_SOC : 20|7@1+ (1,0) [0|127] "%"  Receiver
+ SG_ UI_uSOE : 27|7@1+ (1,0) [0|127] "%"  Receiver
+ SG_ UI_ratedWHpM : 10|10@1+ (1,0) [0|1023] "WHpM"  Receiver
 
 BO_ 577 ID241VCFRONT_coolant: 7 VehicleBus
  SG_ VCFRONT_coolantAirPurgeBatState : 48|3@1+ (1,0) [0|4] ""  Receiver
@@ -2502,7 +2501,7 @@ BO_ 513 ID201VCFRONT_loggingAndVitals10H: 8 VehicleBus
  SG_ VCFRONT_tempSuperheatActual m0 : 34|10@1+ (0.1,-20) [-20|80] "C"  Receiver
  SG_ VCFRONT_tempSuperheatTarget m0 : 44|10@1+ (0.1,0) [0|60] "C"  Receiver
 
-BO_ 984 ID3D8Elevation: 2 VehicleBus
+BO_ 984 ID3D8Elevation: 4 VehicleBus
  SG_ Elevation3D8 : 0|14@1- (1,0) [-8192|8191] "M"  Receiver
 
 BO_ 609 ID261_12vBattStatus: 8 VehicleBus
@@ -2749,7 +2748,7 @@ BO_ 789 ID315RearInverterTemps: 8 VehicleBus
 BO_ 340 ID154RearTorqueOld: 8 VehicleBus
  SG_ RAWTorqueRear154 : 40|12@1- (0.25,0) [-512|511.75] "NM"  Receiver
 
-BO_ 950 ID3B6odometer: 4 VehicleBus
+BO_ 950 ID3B6odometer: 8 VehicleBus
  SG_ Odometer3B6 : 0|32@1+ (0.001,0) [0|4294970] "KM"  Receiver
 
 BO_ 614 ID266RearInverterPower: 8 VehicleBus
@@ -2983,7 +2982,7 @@ BO_ 2047 ID7FFcarConfig: 8 VehicleBus
 
 BO_ 818 ID332BattBrickMinMax: 6 VehicleBus
  SG_ BattBrickMultiplexer332 M : 0|2@1+ (1,0) [0|0] ""  Receiver
- SG_ BattBrickempMaxNum332 m0 : 2|4@1+ (1,0) [0|0] ""  Receiver
+ SG_ BattBrickTempMaxNum332 m0 : 2|4@1+ (1,0) [0|0] ""  Receiver
  SG_ BattBrickTempMinNum332 m0 : 8|4@1+ (1,0) [0|0] ""  Receiver
  SG_ BattBrickTempMax332 m0 : 16|8@1+ (0.5,-40) [0|0] "C"  Receiver
  SG_ BattBrickTempMin332 m0 : 24|8@1+ (0.5,-40) [0|0] "C"  Receiver
